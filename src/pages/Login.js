@@ -11,7 +11,7 @@ export default class Login extends Component {
         const username = await AsyncStorage.getItem('@CrowdCaw:username');
 
         if(username){
-            this.props.navigation.navigate('Timeline');
+            this.props.navigation.navigate('App');
         }
     };
 
@@ -28,7 +28,7 @@ export default class Login extends Component {
 
         await AsyncStorage.setItem('@CrowdCaw:username', username);
 
-        this.props.navigation.navigate('Timeline');
+        this.props.navigation.navigate('App');
     };
 
   render() {
