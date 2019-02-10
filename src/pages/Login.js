@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { AsyncStorage, View, StyleSheet, KeyboardAvoidingView, Text, TextInput, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { AsyncStorage, View, StyleSheet, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default class Login extends Component {
     state = {
@@ -35,8 +34,9 @@ export default class Login extends Component {
     return (
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
             <View style={styles.content}>
-                <View>
-                    <Icon name="twitter" size={64} color="#4BB0EE" />
+                <View style={styles.titleBlock}>
+                    <Image style={{width: 100, height: 100}} source={require('../image/crowdcaw.png')} />
+                    <Text style={styles.mainTitle}>crowdcaw</Text>
                 </View>
 
                 <TextInput 
@@ -60,7 +60,20 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#FFF"
+      backgroundColor: "#e4d9eb"
+    },
+
+    titleBlock: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: "center",
+      alignItems: "center"
+    },
+
+    mainTitle: {
+      fontSize: 35,
+      fontFamily: 'Fredoka One',
+      color: '#5f3479'
     },
   
     content: {
@@ -77,14 +90,15 @@ const styles = StyleSheet.create({
       height: 44,
       paddingHorizontal: 15,
       alignSelf: "stretch",
-      marginTop: 30
+      marginTop: 30,
+      backgroundColor: '#FFF'
     },
   
     button: {
       height: 44,
       alignSelf: "stretch",
       marginTop: 10,
-      backgroundColor: "#4BB0EE",
+      backgroundColor: "#5f3479",
       borderRadius: 5,
       justifyContent: "center",
       alignItems: "center"

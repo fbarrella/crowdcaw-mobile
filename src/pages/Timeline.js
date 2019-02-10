@@ -10,7 +10,7 @@ export default class Timeline extends Component {
     title: "CrowdCaw",
     headerRight: (
       <TouchableOpacity style={{ marginRight: 15 }} onPress={() => navigation.navigate('NewCaw')}>
-        <Icon name="paper-plane-o" size={24} color="#4BB0EE" />
+        <Icon name="paper-plane-o" size={24} color="#5f3479" />
       </TouchableOpacity>
     )
   });
@@ -20,7 +20,7 @@ export default class Timeline extends Component {
   };
 
   subscribeToEvents = () => {
-    const io = socket('http://192.168.11.6:3003');
+    const io = socket('https://infinite-coast-29296.herokuapp.com');
 
     io.on('caw', data => {
       this.setState({ cawList: [data, ... this.state.cawList] });

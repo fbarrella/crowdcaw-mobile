@@ -37,7 +37,7 @@ export default class NewCaw extends Component {
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={this.goBack}>
-                    <Icon name="close" size={24} color="#4BB0EE" />
+                    <Icon name="close" size={24} color="#5f3479" />
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.button} onPress={this.handleCaw}>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         height: 32,
         paddingHorizontal: 20,
         borderRadius: 16,
-        backgroundColor: "#4BB0EE",
+        backgroundColor: "#5f3479",
         justifyContent: "center",
         alignItems: "center"
     },
